@@ -29,7 +29,7 @@ class Empleado {
 
     
     public String toString() {
-        return "Empleado{id=" + id + ", nombre='" + nombre + "', salario=" + salario + "}";
+        return "Empleado{id=" + id + ", Nombre='" + nombre + "', Salario=" + salario + "}";
     }
 }
 class GestorEmpleados {
@@ -42,14 +42,14 @@ class GestorEmpleados {
     public void agregarEmpleado(String nombre, double salario) {
         Empleado nuevo = new Empleado(nombre, salario);
         empleados.add(nuevo);
-        System.out.println("Empleado agregado: " + nuevo);
+        System.out.println("El empleado se ha agregado: " + nuevo);
     }
 
     public void listarEmpleados() {
         if (empleados.isEmpty()) {
-            System.out.println("No hay empleados registrados.");
+            System.out.println("Aun no hay empleados registrados.");
         } else {
-            System.out.println("Lista de empleados:");
+            System.out.println("Lista de empleados registrados:");
             for (Empleado e : empleados) {
                 System.out.println(e);
             }
