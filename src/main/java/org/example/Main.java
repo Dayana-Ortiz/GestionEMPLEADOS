@@ -32,3 +32,4 @@ class Empleado {
         return "Empleado{id=" + id + ", nombre='" + nombre + "', salario=" + salario + "}";
     }
 }
+g
