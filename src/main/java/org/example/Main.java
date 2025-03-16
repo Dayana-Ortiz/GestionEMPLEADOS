@@ -62,16 +62,16 @@ public class Main {
         GestorEmpleados gestor = new GestorEmpleados();
 
         while (true) {
-            System.out.println("\n1. Agregar empleado\n2. Listar empleados\n3. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.println("Agregar empleado. Listar empleados. Salir");
+            System.out.print("Escoja una opción: ");
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine(); 
 
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese nombre del empleado: ");
+                    System.out.print("Ingrese el nombre del empleado: ");
                     String nombre = scanner.nextLine();
-                    System.out.print("Ingrese salario del empleado: ");
+                    System.out.print("Ingrese el salario del empleado: ");
                     double salario = scanner.nextDouble();
                     gestor.agregarEmpleado(nombre, salario);
                     break;
@@ -79,10 +79,10 @@ public class Main {
                     gestor.listarEmpleados();
                     break;
                 case 3:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo.");
                     return;
                 default:
-                    System.out.println("Opción no válida, intente de nuevo.");
+                    System.out.println("Opción no aprobada, intente de nuevo.");
             }
         }
     }
