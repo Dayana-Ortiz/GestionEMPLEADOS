@@ -32,3 +32,27 @@ class Empleado {
         return "Empleado{id=" + id + ", nombre='" + nombre + "', salario=" + salario + "}";
     }
 }
+class GestorEmpleados {
+    private ArrayList<Empleado> empleados;
+
+    public GestorEmpleados() {
+        empleados = new ArrayList<>();
+    }
+
+    public void agregarEmpleado(String nombre, double salario) {
+        Empleado nuevo = new Empleado(nombre, salario);
+        empleados.add(nuevo);
+        System.out.println("Empleado agregado: " + nuevo);
+    }
+
+    public void listarEmpleados() {
+        if (empleados.isEmpty()) {
+            System.out.println("No hay empleados registrados.");
+        } else {
+            System.out.println("Lista de empleados:");
+            for (Empleado e : empleados) {
+                System.out.println(e);
+            }
+        }
+    }
+}
