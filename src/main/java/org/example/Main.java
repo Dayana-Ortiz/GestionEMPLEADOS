@@ -27,7 +27,7 @@ class Empleado {
         return salario;
     }
 
-    @Override
+    
     public String toString() {
         return "Empleado{id=" + id + ", nombre='" + nombre + "', salario=" + salario + "}";
     }
